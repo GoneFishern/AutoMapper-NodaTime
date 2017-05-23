@@ -1,13 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper.NodaTime", "AutoMapper.NodaTime\AutoMapper.NodaTime.csproj", "{49C9C765-57C6-4E34-83A7-14928A5BC964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper.NodaTime (Net40)", "AutoMapper.NodaTime-Net40\AutoMapper.NodaTime (Net40).csproj", "{20EEA7A4-D947-4367-9873-A2CBE474E776}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper.NodaTime.UnitTests", "AutoMapper.NodaTime.UnitTests\AutoMapper.NodaTime.UnitTests.csproj", "{1AA7C64D-C602-49B3-8359-9DF251A8DBBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{71A92A84-E4A5-4181-B2F8-8359E604AB1E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.solution\AutoMapper.NodaTime.snk = .solution\AutoMapper.NodaTime.snk
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".meta", ".meta", "{0929B73D-7AB9-4334-985B-3FC89D4A9E8E}"
+	ProjectSection(SolutionItems) = preProject
+		.meta\automapper-nodatime.png = .meta\automapper-nodatime.png
+		.meta\automapper-nodatime.xcf = .meta\automapper-nodatime.xcf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +32,6 @@ Global
 		{49C9C765-57C6-4E34-83A7-14928A5BC964}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49C9C765-57C6-4E34-83A7-14928A5BC964}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49C9C765-57C6-4E34-83A7-14928A5BC964}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20EEA7A4-D947-4367-9873-A2CBE474E776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20EEA7A4-D947-4367-9873-A2CBE474E776}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20EEA7A4-D947-4367-9873-A2CBE474E776}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20EEA7A4-D947-4367-9873-A2CBE474E776}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1AA7C64D-C602-49B3-8359-9DF251A8DBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1AA7C64D-C602-49B3-8359-9DF251A8DBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AA7C64D-C602-49B3-8359-9DF251A8DBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
