@@ -12,6 +12,7 @@ namespace AutoMapper.NodaTime.UnitTests
             Mapper.Reset();
             Mapper.Initialize(x =>
             {
+                new InstantConverter().Configure(x);
                 new OffsetDateTimeConverter().Configure(x);
 
                 x.CreateMap<Foo1, Foo3>().ReverseMap();

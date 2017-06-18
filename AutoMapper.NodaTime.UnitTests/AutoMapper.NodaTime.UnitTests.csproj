@@ -1,83 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1AA7C64D-C602-49B3-8359-9DF251A8DBBA}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AutoMapper.NodaTime.UnitTests</RootNamespace>
-    <AssemblyName>AutoMapper.NodaTime.UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="DurationTests.cs" />
-    <Compile Include="OffsetDateTimeTests.cs" />
-    <Compile Include="InstantTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NodaTime, Version=1.3.0.0, Culture=neutral, PublicKeyToken=4226afe0d9b296d1, processorArchitecture=MSIL">
-      <HintPath>..\packages\NodaTime.1.3.1\lib\net35-Client\NodaTime.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoMapper.NodaTime\AutoMapper.NodaTime.csproj">
-      <Project>{49c9c765-57c6-4e34-83a7-14928a5bc964}</Project>
-      <Name>AutoMapper.NodaTime</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net452</TargetFrameworks>
+        <PackageId>AutoMapper-NodaTime.Tests</PackageId>
+        <Description>xUnit Unit Tests for AutoMapper.NodaTime</Description>
+        <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <OutputType>Exe</OutputType>
+        <AssemblyName>AutoMapper.NodaTime.Tests</AssemblyName>
+        <AssemblyTitle>AutoMapper.NodaTime.Tests</AssemblyTitle>
+        <Company>Matt Johnson</Company>
+        <Product>NodaTime support for AutoMapper</Product>
+        <AssemblyType></AssemblyType>
+        <Version>4.1.1.0</Version>
+        <FileVersion>4.1.1.0</FileVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <ProductVersion>4.1.1</ProductVersion>
+        <PackageVersion>4.1.1</PackageVersion>
+        <Authors>Matt Johnson (https://github.com/mj1856); Nathaniel Kilzer (https://github.com/nkilzer)</Authors>
+        <Copyright>Copyright © 2017 Matt Johnson (https://github.com/mj1856), Nathaniel Kilzer (https://github.com/nkilzer)</Copyright>
+        <IncludeSymbols>true</IncludeSymbols>
+        <IncludeSource>true</IncludeSource>
+        <PackageProjectUrl>https://github.com/nkilzer/AutoMapper-NodaTime</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/nkilzer/AutoMapper-NodaTime/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://raw.githubusercontent.com/nkilzer/AutoMapper-NodaTime/master/.meta/automapper-nodatime.png</PackageIconUrl>
+        <RepositoryUrl>https://github.com/nkilzer/AutoMapper-NodaTime.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>automapper;nodatime;tests</PackageTags>
+        <SignAssembly>True</SignAssembly>
+        <DelaySign>False</DelaySign>
+        <AssemblyOriginatorKeyFile>..\.solution\AutoMapper.NodaTime.snk</AssemblyOriginatorKeyFile>
+        <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wpa81+wp8</PackageTargetFallback>
+        <IncludeBuiltProjectOutputGroup>true</IncludeBuiltProjectOutputGroup>
+        <IncludeDocumentationProjectOutputGroup>true</IncludeDocumentationProjectOutputGroup>
+        <IncludeDebugSymbolsProjectOutputGroup>true</IncludeDebugSymbolsProjectOutputGroup>
+    </PropertyGroup>
+    <!-- Per discussion @ https://github.com/dotnet/project-system/issues/1369 -->
+    <PropertyGroup Condition="'$(TargetFramework)' == 'portable-net45+win8+wpa81+wp8'">
+        <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+        <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+        <!-- https://github.com/dotnet/sdk/issues/492 indicates that this still may be needed, changing this to v4.5 seems to break the build... -->
+        <NugetTargetMoniker>.NETPortable,Version=v0.0,Profile=Profile259</NugetTargetMoniker>
+        <LanguageTargets>$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets</LanguageTargets>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference IncludeAssets="All" Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+        <PackageReference IncludeAssets="All" Include="Moq" Version="4.7.10" />
+        <PackageReference IncludeAssets="All" Include="xunit" Version="2.2.0" />
+        <PackageReference IncludeAssets="All" Include="xunit.runner.visualstudio" Version="2.2.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\AutoMapper.NodaTime\AutoMapper.NodaTime.csproj" />
+    </ItemGroup>
 </Project>
